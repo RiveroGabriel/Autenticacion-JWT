@@ -1,0 +1,30 @@
+# CAMBIAR: Puerto del microservicio
+server:
+  port: 8080
+
+# Configuracion de la aplicacion Spring Boot
+spring:
+  application:
+    # CAMBIAR: nombre de la aplicacion
+    name: jwtsecurity
+
+  #
+  # AGREGAR: configuracion de base de datos si se usa JPA.
+  # Ejemplo para MySQL:
+  #
+  # datasource:
+  #   url: jdbc:mysql://localhost:3306/tu_base?useSSL=false&serverTimezone=America/Argentina/Buenos_Aires
+  #   username: root
+  #   password: root
+  # jpa:
+  #   hibernate:
+  #     ddl-auto: update
+  #   show-sql: true
+  #
+
+# Propiedades personalizadas para JWT
+jwt:
+  # CAMBIAR: clave secreta. Debe ser segura y de al menos 256 bits para HS256.
+  secret: tuClaveSecretaMuySeguraDeAlMenos32Caracteres123
+  # CAMBIAR: tiempo de expiracion del token en milisegundos (ej. 86400000 = 24 horas)
+  expiration: 86400000
